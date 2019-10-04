@@ -6,6 +6,7 @@ from ckeditor.fields import RichTextField
 # django-mptt
 from mptt.models import MPTTModel, TreeForeignKey
 
+
 # 博文的评论
 class Comment(MPTTModel):
     article = models.ForeignKey(
@@ -15,8 +16,8 @@ class Comment(MPTTModel):
     )
 
     user = models.ForeignKey(
-        User, 
-        on_delete=models.CASCADE, 
+        User,
+        on_delete=models.CASCADE,
         related_name='comments'
     )
 

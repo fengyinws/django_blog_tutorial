@@ -80,14 +80,14 @@ class ArticlePost(models.Model):
     # 内部类 class Meta 用于给 model 定义元数据
     # 元数据：不是一个字段的任何数据
     class Meta:
-    	# ordering 指定模型返回的数据的排列顺序
+        # ordering 指定模型返回的数据的排列顺序
     	# '-created' 表明数据应该以倒序排列
         ordering = ('-created',)
 
     # 函数 __str__ 定义当调用对象的 str() 方法时的返回值内容
     # 它最常见的就是在Django管理后台中做为对象的显示值。因此应该总是为 __str__ 返回一个友好易读的字符串
     def __str__(self):
-    	# 将文章标题返回
+        # 将文章标题返回
         return self.title
 
     # 获取文章地址

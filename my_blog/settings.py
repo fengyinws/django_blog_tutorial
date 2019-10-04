@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '__=s9@oixaun$x^g7-4#10wf_*7zvb8)kl1$j82fj&cyq%^o^3'
+SECRET_KEY = '#gw)rs!e%cy@3h$zgf0or+n%4g1j2g=se1t+9$gffmtqpukgjl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -97,9 +97,13 @@ WSGI_APPLICATION = 'my_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME':'myblog',
+            'HOST':'mysql57.rdsml6mmxgdoqvd.rds.bj.baidubce.com',
+            'PORT':'3306',
+            'USER':'root',
+            'PASSWORD':'glz123456!'
+        }
 }
 
 
@@ -148,17 +152,17 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
 # SMTP服务器
-EMAIL_HOST = 'your smtp'
+EMAIL_HOST = 'smtp.163.com'
 # 邮箱名
-EMAIL_HOST_USER = 'your email'
+EMAIL_HOST_USER = 'a2535254022.163.com'
 # 邮箱密码
-EMAIL_HOST_PASSWORD = 'your password'
+EMAIL_HOST_PASSWORD = 'glz123'
 # 发送邮件的端口
 EMAIL_PORT = 25
 # 是否使用 TLS
 EMAIL_USE_TLS = True
 # 默认的发件人
-DEFAULT_FROM_EMAIL = 'your email'
+DEFAULT_FROM_EMAIL = 'a2535254022.163.com'
 
 # 媒体文件地址
 MEDIA_URL = '/media/'
