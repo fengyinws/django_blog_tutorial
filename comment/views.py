@@ -46,16 +46,16 @@ def post_comment(request, article_id, parent_comment_id=None):
                 return JsonResponse({"code": "200 OK", "new_comment_id": new_comment.id})
 
             new_comment.save()
-            
+
             # 给管理员发送通知
             if not request.user.is_superuser:
                 notify.send(
-                        request.user,
-                        recipient=User.objects.filter(is_superuser=1),
-                        verb='回复了你',
-                        target=article,
-                        action_object=new_comment,
-                    )
+                    request.user,
+                    recipient=User.objects.filter(is_superuser=1),
+                    verb='回复了你',
+                    target=article,
+                    action_object=new_comment,
+                )
 
             # 添加锚点
             redirect_url = article.get_absolute_url() + '#comment_elem_' + str(new_comment.id)

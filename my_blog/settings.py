@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ SECRET_KEY = '#gw)rs!e%cy@3h$zgf0or+n%4g1j2g=se1t+9$gffmtqpukgjl'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -91,21 +89,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_blog.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME':'myblog',
-            'HOST':'mysql57.rdsml6mmxgdoqvd.rds.bj.baidubce.com',
-            'PORT':'3306',
-            'USER':'root',
-            'PASSWORD':'glz123456!'
-        }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myblog',
+        'HOST': 'mysql57.rdsml6mmxgdoqvd.rds.bj.baidubce.com',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'glz123456!'
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -125,7 +121,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -138,7 +133,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -172,8 +166,8 @@ CKEDITOR_CONFIGS = {
     # django-ckeditor默认使用default配置
     'default': {
         # 编辑器宽度自适应
-        'width':'auto',
-        'height':'250px',
+        'width': 'auto',
+        'height': '250px',
         # tab键转换空格数
         'tabSpaces': 4,
         # 工具栏风格
@@ -181,7 +175,7 @@ CKEDITOR_CONFIGS = {
         # 工具栏按钮
         'toolbar_Custom': [
             # 表情 代码块
-            ['Smiley', 'CodeSnippet'], 
+            ['Smiley', 'CodeSnippet'],
             # 字体风格
             ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
             # 字体颜色

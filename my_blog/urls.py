@@ -9,7 +9,6 @@ import notifications.urls
 
 from article.views import article_list
 
-
 # 存放了映射关系的列表
 urlpatterns = [
     path('admin/', admin.site.urls),

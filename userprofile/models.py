@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+
+
 # 引入内置信号
 # from django.db.models.signals import post_save
 # 引入信号接收器的装饰器
@@ -19,7 +21,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return 'user {}'.format(self.user.username)
-
 
 # 旧教程中采用了信号接收函数，在后台添加User时有时会产生bug
 # 已采用其他方法实现其功能，废除了此信号接收函数

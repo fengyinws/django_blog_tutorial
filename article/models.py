@@ -12,13 +12,14 @@ from taggit.managers import TaggableManager
 # 处理图片
 from PIL import Image
 
+
 class ArticleColumn(models.Model):
     """
     文章栏目的 Model
     """
     # 栏目标题
     title = models.CharField(max_length=100, blank=True)
-    
+
     # 创建时间
     created = models.DateTimeField(default=timezone.now)
 
@@ -81,7 +82,7 @@ class ArticlePost(models.Model):
     # 元数据：不是一个字段的任何数据
     class Meta:
         # ordering 指定模型返回的数据的排列顺序
-    	# '-created' 表明数据应该以倒序排列
+        # '-created' 表明数据应该以倒序排列
         ordering = ('-created',)
 
     # 函数 __str__ 定义当调用对象的 str() 方法时的返回值内容
@@ -113,7 +114,7 @@ class ArticlePost(models.Model):
     def was_created_recently(self):
         # 若文章是 1 分钟内发表的，则返回 True
         diff = timezone.now() - self.created
-        
+
         # if diff.days <= 0 and diff.seconds < 60:
         if diff.days == 0 and diff.seconds >= 0 and diff.seconds < 60:
             return True

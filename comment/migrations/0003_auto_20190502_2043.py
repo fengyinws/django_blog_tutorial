@@ -7,7 +7,6 @@ import mptt.fields
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('comment', '0002_auto_20190318_2051'),
@@ -17,11 +16,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='comment',
             name='parent',
-            field=mptt.fields.TreeForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='children', to='comment.Comment'),
+            field=mptt.fields.TreeForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                             related_name='children', to='comment.Comment'),
         ),
         migrations.AddField(
             model_name='comment',
             name='reply_to',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='replyers', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='replyers', to=settings.AUTH_USER_MODEL),
         ),
     ]

@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 # 引入 Profile 模型
 from .models import Profile
 
+
 # 登录表单，继承了 forms.Form 类
 class UserLoginForm(forms.Form):
     username = forms.CharField()

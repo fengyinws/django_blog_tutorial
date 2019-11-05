@@ -6,7 +6,6 @@ import django.utils.timezone
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('article', '0003_articlepost_total_views'),
     ]
@@ -23,6 +22,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='articlepost',
             name='column',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='article', to='article.ArticleColumn'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='article', to='article.ArticleColumn'),
         ),
     ]
