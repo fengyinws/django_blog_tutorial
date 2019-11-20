@@ -1,0 +1,48 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Nov 20 16:50:34 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 21 September 2019 04:02:56
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /opt/fengyinws/django_blog
+writing pidfile to /opt/fengyinws/django_blog/uwsgi.pid
+detected binary path: /root/.Envs/django/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /opt/fengyinws/django_blog
+your processes number limit is 15087
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:9000 fd 3
+uwsgi socket 0 bound to TCP address 0.0.0.0:9001 fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Sep  6 2019, 11:26:47)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x1f75f00
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1f75f00 pid: 25769 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 25769)
+spawned uWSGI worker 1 (pid: 25771, cores: 2)
+spawned uWSGI worker 2 (pid: 25772, cores: 2)
+spawned uWSGI worker 3 (pid: 25774, cores: 2)
+spawned uWSGI worker 4 (pid: 25776, cores: 2)
+*** Stats server enabled on 0.0.0.0:9002 fd: 19 ***
+spawned uWSGI http 1 (pid: 25777)
+[pid: 25774|app: 0|req: 1/1] 218.67.244.34 () {44 vars in 818 bytes} [Wed Nov 20 16:50:42 2019] GET / => generated 13952 bytes in 939 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 25771|app: 0|req: 1/2] 218.67.244.34 () {42 vars in 741 bytes} [Wed Nov 20 16:50:48 2019] GET /favicon.ico => generated 2992 bytes in 129 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 25774|app: 0|req: 2/3] 218.67.244.34 () {44 vars in 825 bytes} [Wed Nov 20 16:51:18 2019] GET / => generated 13952 bytes in 700 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
