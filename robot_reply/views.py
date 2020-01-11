@@ -30,4 +30,4 @@ def get_reply(request):
             reply = choice(reply_list)
     except:
         reply = choice(reply_list)
-    return reply
+    return HttpResponse(reply)
