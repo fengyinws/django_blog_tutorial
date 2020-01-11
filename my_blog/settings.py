@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'userprofile',
     'comment',
     'notice',
+    'robot_reply',
 ]
 
 MIDDLEWARE = [
