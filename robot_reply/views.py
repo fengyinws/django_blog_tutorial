@@ -1,3 +1,4 @@
+import hashlib
 import json
 from random import choice
 from django.http import HttpResponse
@@ -13,10 +14,18 @@ def get_reply(request):
     # data = requests.post.get
     if request.method == 'GET':
         data = request.GET.get('data')
-        tokon = request.GET.get('tokon')
+        token = request.GET.get('tokon')
+        signature = request.GET.get("signature", None)
+        timestamp = request.GET.get("timestamp", None)
+        nonce = request.GET.get("nonce", None)
+        echostr = request.GET.get("echostr", None)
+        range_dict = [token, timestamp, nonce]  # 做成一个字典
+        range_dict.sort()  # 把字典排序
+        range_str = "%s%s%s" % tuple(range_dict)  # 转换成元祖
+        range_str = hashlib.sha1(range_str).hexdigest()
     elif request.method == 'POST':
         data = request.POST.get('data')
-        tokon = request.POST.get('tokon')
+        token = request.POST.get('tokon')
     else:
         return HttpResponse("俺也不知道发生了什么！")
     url = "https://api.ownthink.com/bot"
@@ -25,6 +34,7 @@ def get_reply(request):
         "appid": "f2a2c494b2a7022199e95d22572635e4",
         "userid": "hehe"
     }
+
     try:
         res = requests.post(url, data=json.dumps(body))
         reply = res.text()
@@ -33,5 +43,5 @@ def get_reply(request):
     except:
         reply = choice(reply_list)
     # return HttpResponse(reply)
-    if tokon == "20CE57016F931069C39BBE0976EBAB2A":
+    if range_str == "20CE57016F931069C39BBE0976EBAB2A":
         return HttpResponse("20CE57016F931069C39BBE0976EBAB2A")
