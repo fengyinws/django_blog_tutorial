@@ -13,8 +13,10 @@ def get_reply(request):
     # data = requests.post.get
     if request.method == 'GET':
         data = request.GET.get('data')
+        tokon = request.GET.get('tokon')
     elif request.method == 'POST':
         data = request.POST.get('data')
+        tokon = request.POST.get('tokon')
     else:
         return HttpResponse("俺也不知道发生了什么！")
     url = "https://api.ownthink.com/bot"
@@ -31,4 +33,5 @@ def get_reply(request):
     except:
         reply = choice(reply_list)
     # return HttpResponse(reply)
-    return HttpResponse("20CE57016F931069C39BBE0976EBAB2A")
+    if tokon == "20CE57016F931069C39BBE0976EBAB2A":
+        return HttpResponse("20CE57016F931069C39BBE0976EBAB2A")
