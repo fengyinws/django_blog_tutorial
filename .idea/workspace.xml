@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5f87d2b5-a179-4918-b3ba-61b3a4ae1bbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot_reply/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot_reply/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/my_blog/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="709">
-              <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="37" />
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="37" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -31,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/robot_reply/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -39,25 +40,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot_reply/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+            <state relative-caret-position="619">
+              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notice/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/comment/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="67" column="10" lean-forward="true" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+              <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -75,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2430">
@@ -233,7 +222,7 @@
       <workItem from="1573466696403" duration="490000" />
       <workItem from="1573524149278" duration="617000" />
       <workItem from="1574233342206" duration="1573000" />
-      <workItem from="1578732090239" duration="3224000" />
+      <workItem from="1578732090239" duration="4238000" />
     </task>
     <task id="LOCAL-00001" summary="格式化">
       <created>1572941129104</created>
@@ -277,17 +266,31 @@
       <option name="project" value="LOCAL" />
       <updated>1578735104628</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1">
+      <created>1578735464155</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578735464155</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1">
+      <created>1578735763559</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578735763559</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17038000" />
+    <option name="totallyTimeSpent" value="18052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12974052" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12974052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -301,7 +304,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.500499" side_tool="true" weight="0.32997987" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.499501" visible="true" weight="0.41750503" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.499501" visible="true" weight="0.41750503" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -487,20 +490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_reply/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_blog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
-          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="37" />
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="37" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -510,10 +503,17 @@
     <entry file="file://$PROJECT_DIR$/comment/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="67" column="10" lean-forward="true" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2430">
+          <caret line="21" column="64" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -527,20 +527,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_reply/views.py">
+    <entry file="file://$PROJECT_DIR$/robot_reply/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+        <state relative-caret-position="300">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
+    <entry file="file://$PROJECT_DIR$/robot_reply/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2430">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="64" />
+        <state relative-caret-position="619">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
