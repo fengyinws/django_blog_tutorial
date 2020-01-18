@@ -65,7 +65,7 @@ def get_reply(request):
         #     openid = request.POST.get("openid")
         # else:
         #     openid = "not_get"
-            # return HttpResponse("俺也不知道发生了什么！")
+        # return HttpResponse("俺也不知道发生了什么！")
         try:
             wechat.parse_data(data=request.body)
         except ParseError:
@@ -93,7 +93,12 @@ def get_reply(request):
         except:
             reply = choice(reply_list)
         createdAt = datetime.now()
-        db = WechatRobotLog(open_id=openid, user_text=data, reply_text=reply, created_at=str(createdAt))
+        user_name = WechatRobotLog.objects.filter(open_id=openid)
+        if len(user_name) > 0:
+            username = user_name[0]
+        else:
+            username = ''
+        db = WechatRobotLog(open_id=openid, user_text=data, reply_text=reply, created_at=str(createdAt), user_name=username)
         db.save()
         reply = reply.replace("小思", "小风")
         result = wechat.response_text(content=reply)
