@@ -73,12 +73,18 @@ def get_reply(request):
         }
         try:
             res = requests.post(url, data=json.dumps(body))
+            data = json.loads(res.text)
+            if data["message"] == "success":
+                reply = data["data"]["info"]["text"]
+                print(reply)
+                if not reply:
+                    reply = choice(reply_list)
+            else:
+                reply = "服务器异常"
 
-            reply = res.text()
-            print(reply)
-            if not reply:
-                reply = choice(reply_list)
         except:
             reply = choice(reply_list)
         return HttpResponse(reply, content_type='application/xml')
+
+
 
