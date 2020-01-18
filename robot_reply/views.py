@@ -1,5 +1,6 @@
 import hashlib
 import json
+from datetime import datetime
 from random import choice
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt  # 解除csrf验证
@@ -12,6 +13,7 @@ import requests
 
 # W92a22dE411LJHEQG2MszRingLZsRI33LMAGhfng8Uo
 # 20CE57016F931069C39BBE0976EBAB2A
+from robot_reply.models import WechatRobotLog
 
 conf = WechatConf(  # 实例化配置信息对象
     token='20CE57016F931069C39BBE0976EBAB2A',  # 服务器配置-Token
@@ -46,6 +48,7 @@ def get_reply(request):
     timestamp = request.GET.get('timestamp')
     nonce = request.GET.get('nonce')
     wechat_instance = WechatBasic(conf=conf)  # 实例化微信基类对象
+
     if not wechat_instance.check_signature(signature=signature, timestamp=timestamp, nonce=nonce):  # 检查验证请求的签名
         return HttpResponseBadRequest('Verify Failed')
     else:
@@ -53,20 +56,22 @@ def get_reply(request):
         #     return HttpResponse(request.GET.get('echostr', None))  # 返回请求中的回复信息
 
         # data = requests.post.get
-        # if request.method == 'GET':
-        #     data = request.GET.get('data')
-        # elif request.method == 'POST':
-        #     data = request.POST.get('data')
-        # else:
-        #     return HttpResponse("俺也不知道发生了什么！")
-
+        if request.method == 'GET':
+            # data = request.GET.get('data')
+            openid = request.GET.get("openid")
+        elif request.method == 'POST':
+            # data = request.POST.get('data')
+            openid = request.POST.get("openid")
+        else:
+            openid = "not_get"
+            # return HttpResponse("俺也不知道发生了什么！")
         try:
             wechat.parse_data(data=request.body)
         except ParseError:
             return HttpResponseBadRequest('无效的xml数据')
         message = wechat.get_message()
         data = message.content.strip()
-        print(data)
+        # print(data)
         url = "https://api.ownthink.com/bot"
         body = {
             "spoken": data,
@@ -86,5 +91,9 @@ def get_reply(request):
 
         except:
             reply = choice(reply_list)
+        createdAt = datetime.now()
+        db = WechatRobotLog(open_id=openid, user_text=data, reply_text=reply, created_at=str(createdAt))
+        db.save()
+        reply = reply.replace("小思", "小风")
         result = wechat.response_text(content=reply)
         return HttpResponse(result, content_type='application/xml')
