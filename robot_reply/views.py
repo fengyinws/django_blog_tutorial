@@ -47,6 +47,7 @@ def get_reply(request):
     signature = request.GET.get('signature')  # 获取请求信息
     timestamp = request.GET.get('timestamp')
     nonce = request.GET.get('nonce')
+    openid = request.GET.get("openid")
     wechat_instance = WechatBasic(conf=conf)  # 实例化微信基类对象
 
     if not wechat_instance.check_signature(signature=signature, timestamp=timestamp, nonce=nonce):  # 检查验证请求的签名
@@ -56,14 +57,14 @@ def get_reply(request):
         #     return HttpResponse(request.GET.get('echostr', None))  # 返回请求中的回复信息
 
         # data = requests.post.get
-        if request.method == 'GET':
-            # data = request.GET.get('data')
-            openid = request.GET.get("openid")
-        elif request.method == 'POST':
-            # data = request.POST.get('data')
-            openid = request.POST.get("openid")
-        else:
-            openid = "not_get"
+        # if request.method == 'GET':
+        #     # data = request.GET.get('data')
+        #     openid = request.GET.get("openid")
+        # elif request.method == 'POST':
+        #     # data = request.POST.get('data')
+        #     openid = request.POST.get("openid")
+        # else:
+        #     openid = "not_get"
             # return HttpResponse("俺也不知道发生了什么！")
         try:
             wechat.parse_data(data=request.body)
