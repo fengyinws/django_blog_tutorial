@@ -71,7 +71,7 @@ def get_reply(request):
         except ParseError:
             return HttpResponseBadRequest('无效的xml数据')
         message = wechat.get_message()
-        data_get = message.content.strip()
+        data_get = message.content.strip().replace("小风", "小思")
         # print(data)
         url = "https://api.ownthink.com/bot"
         body = {
