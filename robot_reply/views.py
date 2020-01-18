@@ -9,6 +9,7 @@ from wechat_sdk import WechatBasic
 from wechat_sdk.exceptions import ParseError
 # from django.shortcuts import render
 import requests
+
 # W92a22dE411LJHEQG2MszRingLZsRI33LMAGhfng8Uo
 # 20CE57016F931069C39BBE0976EBAB2A
 
@@ -20,10 +21,11 @@ conf = WechatConf(  # 实例化配置信息对象
     encoding_aes_key='W92a22dE411LJHEQG2MszRingLZsRI33LMAGhfng8Uo'  # 服务器配置-EncodingAESKey
 )
 
-
-wechat = WechatBasic(token="20CE57016F931069C39BBE0976EBAB2A", appid="wxc03bd4226a49bbbd", appsecret="W92a22dE411LJHEQG2MszRingLZsRI33LMAGhfng8Uo")
+wechat = WechatBasic(token="20CE57016F931069C39BBE0976EBAB2A", appid="wxc03bd4226a49bbbd",
+                     appsecret="W92a22dE411LJHEQG2MszRingLZsRI33LMAGhfng8Uo")
 reply_list = ["请问下一个问题！", "我还没吃饱，忘记这个问题该怎么回答了^-^", "请我五百年的时间考虑怎么回答你。",
-                  "可以换一个问题吗？", "发生了异常！", "唔---", "emmmmmmm", "2333333333"]
+              "可以换一个问题吗？", "发生了异常！", "唔---", "emmmmmmm", "2333333333"]
+
 
 # @csrf_exempt  # 去除csrf验证
 # def get_reply(request):
@@ -84,7 +86,5 @@ def get_reply(request):
 
         except:
             reply = choice(reply_list)
-        return HttpResponse(reply, content_type='application/xml')
-
-
-
+        result = wechat.response_text(content=reply)
+        return HttpResponse(result, content_type='application/xml')
