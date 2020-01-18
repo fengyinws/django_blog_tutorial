@@ -95,7 +95,7 @@ def get_reply(request):
         createdAt = datetime.now()
         user_name = WechatRobotLog.objects.filter(open_id=openid)
         try:
-            username = user_name[0]
+            username = user_name[0].user_name
         except:
             username = ''
         db = WechatRobotLog(open_id=openid, user_text=data_get, reply_text=reply, created_at=str(createdAt),
