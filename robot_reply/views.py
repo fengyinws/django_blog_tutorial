@@ -32,7 +32,7 @@ import requests
 #             return HttpResponse(request.GET.get('echostr', None))  # 返回请求中的回复信息
 
 
-
+# @csrf_exempt
 def get_reply(request):
     reply_list = ["请问下一个问题！", "我还没吃饱，忘记这个问题该怎么回答了^-^", "请我五百年的时间考虑怎么回答你。",
                   "可以换一个问题吗？", "发生了异常！", "唔---", "emmmmmmm", "2333333333"]
@@ -43,6 +43,7 @@ def get_reply(request):
         data = request.POST.get('data')
     else:
         return HttpResponse("俺也不知道发生了什么！")
+    print(data)
     url = "https://api.ownthink.com/bot"
     body = {
         "spoken": data,
