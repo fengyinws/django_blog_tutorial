@@ -5,6 +5,8 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt  # 解除csrf验证
 from wechat_sdk import WechatConf
 from wechat_sdk import WechatBasic
+
+from wechat_sdk.exceptions import ParseError
 # from django.shortcuts import render
 import requests
 # W92a22dE411LJHEQG2MszRingLZsRI33LMAGhfng8Uo
@@ -19,6 +21,7 @@ conf = WechatConf(  # 实例化配置信息对象
 )
 
 
+wechat = WechatBasic(token="20CE57016F931069C39BBE0976EBAB2A", appid="wxc03bd4226a49bbbd", appsecret="W92a22dE411LJHEQG2MszRingLZsRI33LMAGhfng8Uo")
 reply_list = ["请问下一个问题！", "我还没吃饱，忘记这个问题该怎么回答了^-^", "请我五百年的时间考虑怎么回答你。",
                   "可以换一个问题吗？", "发生了异常！", "唔---", "emmmmmmm", "2333333333"]
 
@@ -48,12 +51,19 @@ def get_reply(request):
         #     return HttpResponse(request.GET.get('echostr', None))  # 返回请求中的回复信息
 
         # data = requests.post.get
-        if request.method == 'GET':
-            data = request.GET.get('data')
-        elif request.method == 'POST':
-            data = request.POST.get('data')
-        else:
-            return HttpResponse("俺也不知道发生了什么！")
+        # if request.method == 'GET':
+        #     data = request.GET.get('data')
+        # elif request.method == 'POST':
+        #     data = request.POST.get('data')
+        # else:
+        #     return HttpResponse("俺也不知道发生了什么！")
+
+        try:
+            wechat.parse_data(data=request.body)
+        except ParseError:
+            return HttpResponseBadRequest('无效的xml数据')
+        message = wechat.get_message()
+        data = message.content.strip()
         print(data)
         url = "https://api.ownthink.com/bot"
         body = {
