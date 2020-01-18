@@ -71,11 +71,11 @@ def get_reply(request):
         except ParseError:
             return HttpResponseBadRequest('无效的xml数据')
         message = wechat.get_message()
-        data = message.content.strip()
+        data_get = message.content.strip()
         # print(data)
         url = "https://api.ownthink.com/bot"
         body = {
-            "spoken": data,
+            "spoken": data_get,
             "appid": "f2a2c494b2a7022199e95d22572635e4",
             "userid": "hehe"
         }
@@ -94,11 +94,12 @@ def get_reply(request):
             reply = choice(reply_list)
         createdAt = datetime.now()
         user_name = WechatRobotLog.objects.filter(open_id=openid)
-        if len(user_name) > 0:
+        try:
             username = user_name[0]
-        else:
+        except:
             username = ''
-        db = WechatRobotLog(open_id=openid, user_text=data, reply_text=reply, created_at=str(createdAt), user_name=username)
+        db = WechatRobotLog(open_id=openid, user_text=data_get, reply_text=reply, created_at=str(createdAt),
+                            user_name=username)
         db.save()
         reply = reply.replace("小思", "小风")
         result = wechat.response_text(content=reply)
