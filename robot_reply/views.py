@@ -73,10 +73,12 @@ def get_reply(request):
         }
         try:
             res = requests.post(url, data=json.dumps(body))
+
             reply = res.text()
+            print(reply)
             if not reply:
                 reply = choice(reply_list)
         except:
             reply = choice(reply_list)
-        return HttpResponse(reply)
+        return HttpResponse(reply, content_type='application/xml')
 
