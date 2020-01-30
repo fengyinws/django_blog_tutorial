@@ -48,7 +48,7 @@ def article_list(request):
     session_id = request.COOKIES.get('sessionid')
     user_id = None
     if session_id:
-        session_datas = ArticlePost.objects.raw("select session_data from django_session where session_key = {0}".format(session_id))
+        session_datas = ArticlePost.objects.raw("select session_data from django_session where session_key = '{0}'".format(session_id))
         session = None
         for session_data in session_datas:
             session = session_data
