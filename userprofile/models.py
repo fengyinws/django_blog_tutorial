@@ -10,6 +10,8 @@ from django.contrib.auth.models import User
 
 # 用户扩展信息
 class Profile(models.Model):
+    # id
+    user_id = models.IntegerField(primary_key=True)
     # 与 User 模型构成一对一的关系
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     # 电话号码字段

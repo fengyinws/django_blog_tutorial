@@ -1,4 +1,6 @@
 # 引入redirect重定向模块
+import json
+
 from django.shortcuts import render, redirect, get_object_or_404
 # 引入User模型
 from django.contrib.auth.models import User
@@ -6,6 +8,8 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 # 导入数据模型ArticlePost, ArticleColumn
 from .models import ArticlePost, ArticleColumn
+# 导入用户数据模型
+from userprofile.models import Profile
 # 引入刚才定义的ArticlePostForm表单类
 from .forms import ArticlePostForm
 # 引入markdown模块
@@ -18,7 +22,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 # Comment 模型
 from comment.models import Comment
-
+import base64
 from comment.forms import CommentForm
 
 # 通用类视图
@@ -41,10 +45,28 @@ def article_list(request):
     order = request.GET.get('order')
     column = request.GET.get('column')
     tag = request.GET.get('tag')
-
+    session_id = request.COOKIES.get('sessionid')
+    user_id = None
+    if session_id:
+        session_datas = ArticlePost.objects.raw("select session_data from django_session where session_key = {0}".format(session_id))
+        session = None
+        for session_data in session_datas:
+            session = session_data
+            break
+        if session:
+            session_format = base64.b64decode(session).decode('utf-8')
+            session_data_from = session_format.replace(session_format.split(':')[0]+':', '')
+            user_id = json.loads(session_data_from)['_auth_user_id']
+    # article_user_id = Profile.objects.filter()
     # 初始化查询集
     article_list = ArticlePost.objects.all()
 
+    # 用户及限制
+    if user_id:
+        article_list = article_list.filter(
+            Q(author_id=user_id) |
+            Q(permit_group=0)
+        )
     # 搜索查询集
     if search:
         article_list = article_list.filter(
