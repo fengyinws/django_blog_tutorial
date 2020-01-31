@@ -45,18 +45,19 @@ def article_list(request):
     order = request.GET.get('order')
     column = request.GET.get('column')
     tag = request.GET.get('tag')
-    session_id = request.COOKIES.get('sessionid')
-    user_id = None
-    if session_id:
-        session_datas = ArticlePost.objects.raw("select session_data from django_session where session_key = '{0}'".format(session_id))
-        session = None
-        for session_data in session_datas:
-            session = session_data
-            break
-        if session:
-            session_format = base64.b64decode(session).decode('utf-8')
-            session_data_from = session_format.replace(session_format.split(':')[0]+':', '')
-            user_id = json.loads(session_data_from)['_auth_user_id']
+    user_id = request.user.id
+    # session_id = request.COOKIES.get('sessionid')
+    # user_id = None
+    # if session_id:
+    #     session_datas = ArticlePost.objects.raw("select session_data from django_session where session_key = '{0}'".format(session_id))
+    #     session = None
+    #     for session_data in session_datas:
+    #         session = session_data
+    #         break
+    #     if session:
+    #         session_format = base64.b64decode(session).decode('utf-8')
+    #         session_data_from = session_format.replace(session_format.split(':')[0]+':', '')
+    #         user_id = json.loads(session_data_from)['_auth_user_id']
     # article_user_id = Profile.objects.filter()
     # 初始化查询集
     article_list = ArticlePost.objects.all()
