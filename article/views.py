@@ -72,6 +72,10 @@ def article_list(request):
                 Q(author_id=user_id) |
                 Q(permit_group=0)
             )
+        else:
+            article_list = article_list.filter(
+                Q(permit_group=0)
+            )
     # 搜索查询集
     if search:
         article_list = article_list.filter(
