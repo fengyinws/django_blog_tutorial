@@ -66,7 +66,8 @@ def article_list(request):
     if user_id:
         article_list = article_list.filter(
             Q(author_id=user_id) |
-            Q(permit_group=0)
+            Q(permit_group=0) |
+            Q(user_id=5)
         )
     # 搜索查询集
     if search:
