@@ -62,13 +62,16 @@ def article_list(request):
     # 初始化查询集
     article_list = ArticlePost.objects.all()
 
-    # 用户及限制
-    if user_id:
-        article_list = article_list.filter(
-            Q(author_id=user_id) |
-            Q(permit_group=0) |
-            Q(user_id=5)
-        )
+    # 管理员权限不限制
+    if user_id == 5:
+        pass
+    else:
+        # 用户及限制
+        if user_id:
+            article_list = article_list.filter(
+                Q(author_id=user_id) |
+                Q(permit_group=0)
+            )
     # 搜索查询集
     if search:
         article_list = article_list.filter(
