@@ -189,6 +189,12 @@ def article_create(request):
             if request.POST['column'] != 'none':
                 # 保存文章栏目
                 new_article.column = ArticleColumn.objects.get(id=request.POST['column'])
+            # 权限设置
+            permit_group = request.POST['permit_group']
+            if permit_group == "私密":
+                new_article.permit_group = 1
+            else:
+                new_article.permit_group = 0
             # 将新文章保存到数据库中
             new_article.save()
             # 保存 tags 的多对多关系
