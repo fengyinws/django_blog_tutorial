@@ -180,6 +180,7 @@ def article_create(request):
     if request.method == "POST":
         # 将提交的数据赋值到表单实例中
         article_post_form = ArticlePostForm(request.POST, request.FILES)
+        print(article_post_form)
         # 判断提交的数据是否满足模型的要求
         if article_post_form.is_valid():
             # 保存数据，但暂时不提交到数据库中
@@ -191,10 +192,11 @@ def article_create(request):
                 new_article.column = ArticleColumn.objects.get(id=request.POST['column'])
             # 权限设置
             permit_group = request.POST['permit_group']
-            if permit_group == "私密":
-                new_article.permit_group = 1
-            else:
-                new_article.permit_group = 0
+            new_article.permit_group = permit_group
+            # if permit_group == "私密":
+            #     new_article.permit_group = 1
+            # else:
+            #     new_article.permit_group = 0
             # 将新文章保存到数据库中
             new_article.save()
             # 保存 tags 的多对多关系
@@ -203,6 +205,12 @@ def article_create(request):
             return redirect("article:article_list")
         # 如果数据不合法，返回错误信息
         else:
+            try:
+                # print(article_post_form.clean_data)
+                print(article_post_form.errors)
+            except Exception as e:
+                print(e)
+                print(1)
             return HttpResponse("表单内容有误，请重新填写。")
     # 如果用户请求获取数据
     else:
@@ -269,7 +277,7 @@ def article_update(request, id):
             # 保存新写入的 title、body 数据并保存
             article.title = request.POST['title']
             article.body = request.POST['body']
-
+            article.permit_group = request.POST["permit_group"]
             if request.POST['column'] != 'none':
                 # 保存文章栏目
                 article.column = ArticleColumn.objects.get(id=request.POST['column'])
