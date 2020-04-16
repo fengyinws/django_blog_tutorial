@@ -98,10 +98,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myblog',
-        'HOST': 'mysql57.rdsml6mmxgdoqvd.rds.bj.baidubce.com',
-        'PORT': '3306',
+        'HOST': 'cdb-cjz2i068.bj.tencentcdb.com',
+        'PORT': '3310',
         'USER': 'root',
-        'PASSWORD': 'glz123456!'
+        'PASSWORD': '!gaolizeng6179GLZ@='
     }
 }
 
