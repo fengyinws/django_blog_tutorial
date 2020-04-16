@@ -99,7 +99,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myblog',
         'HOST': 'cdb-cjz2i068.bj.tencentcdb.com',
-        'PORT': '3310',
+        'PORT': '10059',
         'USER': 'root',
         'PASSWORD': '!gaolizeng6179GLZ@='
     }
