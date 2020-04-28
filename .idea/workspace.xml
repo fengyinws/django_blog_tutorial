@@ -19,11 +19,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="297">
+              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
               <folding>
-                <element signature="e#166#172#0#HTML" expanded="true" />
-                <element signature="e#472#478#0#HTML" expanded="true" />
+                <element signature="e#178#184#0#HTML" expanded="true" />
+                <element signature="e#504#510#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,7 +197,7 @@
       <workItem from="1587020110071" duration="1705000" />
       <workItem from="1587030553015" duration="596000" />
       <workItem from="1587086649859" duration="686000" />
-      <workItem from="1588042489043" duration="1296000" />
+      <workItem from="1588042489043" duration="2393000" />
     </task>
     <task id="LOCAL-00001" summary="格式化">
       <created>1572941129104</created>
@@ -346,14 +346,50 @@
       <option name="project" value="LOCAL" />
       <updated>1588043535840</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="jin icp">
+      <created>1588043834335</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588043834335</updated>
+    </task>
+    <task id="LOCAL-00023" summary="jin icp">
+      <created>1588043911127</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1588043911127</updated>
+    </task>
+    <task id="LOCAL-00024" summary="jin icp">
+      <created>1588044057655</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1588044057655</updated>
+    </task>
+    <task id="LOCAL-00025" summary="jin icp">
+      <created>1588044196429</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1588044196429</updated>
+    </task>
+    <task id="LOCAL-00026" summary="jin icp">
+      <created>1588044569664</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1588044569664</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58628000" />
+    <option name="totallyTimeSpent" value="59725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13672923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -369,7 +405,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50268096" side_tool="true" weight="0.35785007" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49731904" visible="true" weight="0.44192636" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49731904" visible="true" weight="0.32577905" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.4295011" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -672,11 +708,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="297">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
           <folding>
-            <element signature="e#166#172#0#HTML" expanded="true" />
-            <element signature="e#472#478#0#HTML" expanded="true" />
+            <element signature="e#178#184#0#HTML" expanded="true" />
+            <element signature="e#504#510#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
