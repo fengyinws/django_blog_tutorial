@@ -2,7 +2,7 @@ from django.urls import path
 # 引入views.py
 from . import views
 
-app_name = 'love_info'
+app_name = 'static_images'
 
 urlpatterns = [
     # 动画页面
