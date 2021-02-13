@@ -24,8 +24,8 @@ SECRET_KEY = '#gw)rs!e%cy@3h$zgf0or+n%4g1j2g=se1t+9$gffmtqpukgjl'
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # 部署到线上时为 False; 读者在本地调试时请修改为 True
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'comment',
     'notice',
     'robot_reply',
+    'static_images',
 ]
 
 MIDDLEWARE = [
