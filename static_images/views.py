@@ -4,3 +4,7 @@ from django.shortcuts import render
 
 def love_images(request):
     return render(request, 'auto_images/index.html')
+
+
+def love_tree(request):
+    return render(request, 'love_tree/index.html')

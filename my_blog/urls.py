@@ -31,6 +31,6 @@ urlpatterns = [
     # 接口服务
     path('api/', include('robot_reply.urls')),
     # 静态页面
-    path('statics/', include('static_images.urls')),
+    path('love/', include('static_images.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

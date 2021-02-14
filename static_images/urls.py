@@ -6,5 +6,6 @@ app_name = 'static_images'
 
 urlpatterns = [
     # 动画页面
-    path('auto_images/', views.love_images, name='auto_images'),
+    path('wyp/', views.love_images, name='auto_images'),
+    path('tree/', views.love_tree, name='love_tree'),
 ]
