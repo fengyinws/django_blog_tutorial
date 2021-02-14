@@ -316,7 +316,7 @@
     font-family:微软雅黑;
     color: white;
     font-size: 30px;
-    z-index: 999999;
+    /*z-index: 999999;*/
     position: absolute;
     left: 47%;
     margin-left: -92.5px;

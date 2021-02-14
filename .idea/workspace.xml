@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5f87d2b5-a179-4918-b3ba-61b3a4ae1bbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_reply/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot_reply/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_reply/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot_reply/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/love_tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/love_tree/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/auto_images/css/55c16dda0001113100000000.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/auto_images/css/55c16dda0001113100000000.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/auto_images/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1221">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            <state relative-caret-position="470">
+              <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/auto_images/css/55c16dda0001113100000000.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="317" column="20" lean-forward="true" selection-start-line="317" selection-start-column="20" selection-end-line="317" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -48,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot_reply/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            <state relative-caret-position="226">
+              <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -57,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot_reply/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="198">
+              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -81,6 +88,7 @@
       <find>session</find>
       <find>happy</find>
       <find>happ</find>
+      <find>z-index</find>
     </findStrings>
     <dirStrings>
       <dir>E:\gitpath\fengyinws\django_blog</dir>
@@ -105,15 +113,16 @@
         <option value="$PROJECT_DIR$/article/models.py" />
         <option value="$PROJECT_DIR$/article/views.py" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
-        <option value="$PROJECT_DIR$/templates/auto_images/index.html" />
         <option value="$PROJECT_DIR$/collected_static/js/55c16c910001e21b00000000.js" />
         <option value="$PROJECT_DIR$/my_blog/urls.py" />
         <option value="$PROJECT_DIR$/static_images/views.py" />
         <option value="$PROJECT_DIR$/static_images/urls.py" />
         <option value="$PROJECT_DIR$/my_blog/settings.py" />
+        <option value="$PROJECT_DIR$/templates/love_tree/index.html" />
         <option value="$PROJECT_DIR$/robot_reply/urls.py" />
         <option value="$PROJECT_DIR$/robot_reply/views.py" />
-        <option value="$PROJECT_DIR$/templates/love_tree/index.html" />
+        <option value="$PROJECT_DIR$/templates/auto_images/index.html" />
+        <option value="$PROJECT_DIR$/static/auto_images/css/55c16dda0001113100000000.css" />
       </list>
     </option>
   </component>
@@ -256,7 +265,7 @@
       <workItem from="1597336402947" duration="638000" />
       <workItem from="1597653548860" duration="624000" />
       <workItem from="1598098018929" duration="231000" />
-      <workItem from="1613235700238" duration="18110000" />
+      <workItem from="1613235700238" duration="19125000" />
     </task>
     <task id="LOCAL-00001" summary="格式化">
       <created>1572941129104</created>
@@ -566,11 +575,25 @@
       <option name="project" value="LOCAL" />
       <updated>1613306658782</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="love_image">
+      <created>1613307259376</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1613307259376</updated>
+    </task>
+    <task id="LOCAL-00046" summary="love_image">
+      <created>1613307441444</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1613307441444</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83080000" />
+    <option name="totallyTimeSpent" value="84095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -590,7 +613,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50268096" side_tool="true" weight="0.35785007" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49731904" visible="true" weight="0.39587852" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49731904" visible="true" weight="0.30151844" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.4295011" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -616,15 +639,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="love_image" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/jquery/jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bootstrap/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -966,23 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_reply/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_reply/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -997,10 +994,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/robot_reply/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_reply/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/auto_images/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1221">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        <state relative-caret-position="470">
+          <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/auto_images/css/55c16dda0001113100000000.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="317" column="20" lean-forward="true" selection-start-line="317" selection-start-column="20" selection-end-line="317" selection-end-column="20" />
         </state>
       </provider>
     </entry>
